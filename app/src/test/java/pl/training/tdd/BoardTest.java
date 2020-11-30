@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class BoardTest {
+class BoardTest {
 
     @DisplayName("Init new game board, expecting non null object")
     @Test
@@ -12,5 +12,7 @@ public class BoardTest {
         var gamebord = new GameBoard();
         Assertions.assertNotNull(gamebord);
     }
+
+
 
 }
