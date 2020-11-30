@@ -6,6 +6,6 @@ class GameBoard {
     }
 
     public Integer getVerticalSize() {
-        return null;
+        return new Integer(3);
     }
 }

@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 
 class BoardTest {
 
-
-
     @DisplayName("Init new game board, expecting non null object")
     @Test
     void initGameBoardTest(){
@@ -15,12 +13,11 @@ class BoardTest {
         Assertions.assertNotNull(gamebord);
     }
 
-    @DisplayName("Init new game board with determined size")
+    @DisplayName("Init new game board with determined vertical size")
     @Test
-    void initGameBoardWithSpecifiedSize(){
+    void initGameBoardWithSpecifiedVerticalSize(){
         var gamebord = new GameBoard(3,3);
         Assertions.assertEquals(gamebord.getVerticalSize(), 3 );
     }
-
 
 }
