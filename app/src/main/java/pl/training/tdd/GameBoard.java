@@ -12,4 +12,8 @@ class GameBoard {
     public Integer getHorizontalSize() {
         return new Integer(3);
     }
+
+    public Boolean makeMove(int varticalPlace, int horizontalPlace, String x) {
+        return null;
+    }
 }

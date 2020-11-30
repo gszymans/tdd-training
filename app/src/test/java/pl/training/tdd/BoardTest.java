@@ -27,4 +27,11 @@ class BoardTest {
         Assertions.assertEquals(gamebord.getHorizontalSize(), 3 );
     }
 
+    @DisplayName("Given movement can occupied the field")
+    @Test
+    void checkIfGivenMovementIsPossible(){
+        var gamebord = new GameBoard(3,3);
+        Assertions.assertEquals(gamebord.makeMove(1,1,"X"), Boolean.TRUE);
+    }
+
 }
