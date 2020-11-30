@@ -10,6 +10,6 @@ class GameBoard {
     }
 
     public Integer getHorizontalSize() {
-        return null;
+        return new Integer(3);
     }
 }
