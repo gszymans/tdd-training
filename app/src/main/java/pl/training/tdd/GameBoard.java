@@ -8,4 +8,8 @@ class GameBoard {
     public Integer getVerticalSize() {
         return new Integer(3);
     }
+
+    public Integer getHorizontalSize() {
+        return null;
+    }
 }

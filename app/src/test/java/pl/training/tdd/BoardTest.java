@@ -20,4 +20,11 @@ class BoardTest {
         Assertions.assertEquals(gamebord.getVerticalSize(), 3 );
     }
 
+    @DisplayName("Init new game board with determined horizontal size")
+    @Test
+    void initGameBoardWithSpecifiedHorizontalSize(){
+        var gamebord = new GameBoard(3,3);
+        Assertions.assertEquals(gamebord.getHorizontalSize(), 3 );
+    }
+
 }
