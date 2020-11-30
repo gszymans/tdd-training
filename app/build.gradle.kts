@@ -12,9 +12,9 @@ application {
     mainClass.set("pl.training.tdd.Application")
 }
 
-//tasks.compileJava {
-//    options.release.set(15)
-//}
+tasks.compileJava {
+    options.release.set(11)
+}
 
 tasks.test {
     useJUnitPlatform()
