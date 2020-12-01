@@ -11,7 +11,7 @@ public class MoneyTest {
     }
 
     @Test
-    void add_some_money(){
+    void add_some_money_in_the_same_currency(){
         var cashInUsd = new Money(CurrencyType.USD);
         var cashInUsd2 = new Money(CurrencyType.USD, Double.valueOf(22.22));
         Assertions.assertEquals(Double.valueOf(22.22), cashInUsd.addMoney(cashInUsd2).getValue());

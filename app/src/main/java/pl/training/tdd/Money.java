@@ -1,9 +1,8 @@
 package pl.training.tdd;
 
-public class Money{
+public class Money {
 
     private final CurrencyType currency;
-
     private Double value = Double.valueOf(0);
 
     public Money(CurrencyType currency) {
