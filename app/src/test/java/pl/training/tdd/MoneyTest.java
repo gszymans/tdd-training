@@ -25,4 +25,11 @@ public class MoneyTest {
         var cashInUsd = new Money(CurrencyType.USD);
         assertThrows(UnmatchetCurrencyException.class, () -> cashInPln.addMoney(cashInUsd));
     }
+
+    @Test
+    void convert_money_to_another_money_with_exchange_rate(){
+        var cashInPln = new Money(CurrencyType.PLN);
+        var cashInUsd = new Money(CurrencyType.USD, Double.valueOf(44.44));
+        Assertions.assertEquals(Double.valueOf(11.11), cashInPln.convert(cashInUsd, Double.valueOf(4.0)).getValue());
+    }
 }

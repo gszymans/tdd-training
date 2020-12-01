@@ -30,4 +30,7 @@ public class Money {
         return this.value;
     }
 
+    public Money convert(Money cashInUsd, Double exchangeRate) {
+        return this;
+    }
 }
