@@ -4,19 +4,27 @@ public class Money{
 
     private final CurrencyType currency;
 
+    private Double value = Double.valueOf(0);
+
     public Money(CurrencyType currency) {
         this.currency = currency;
     }
 
+    public Money(CurrencyType currency, Double value) {
+        this.currency = currency;
+        this.value = value;
+    }
+
     public CurrencyType getCurrency() {
-        return currency;
+        return this.currency;
     }
 
     public Money addMoney(Money money) {
-        return null;
+        this.value = this.value + money.value;
+        return this;
     }
 
     public Double getValue() {
-        return null;
+        return this.value;
     }
 }
