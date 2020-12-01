@@ -11,4 +11,12 @@ public class Money{
     public CurrencyType getCurrency() {
         return currency;
     }
+
+    public Money addMoney(Money money) {
+        return null;
+    }
+
+    public Double getValue() {
+        return null;
+    }
 }
