@@ -39,4 +39,8 @@ public class Money {
     public void setValue(Double value){
         this.value = value;
     }
+
+    public Money addMoney(Money cashInUsd, Double valueOf) {
+        return null;
+    }
 }

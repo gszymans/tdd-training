@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class MoneyTest {
 
     @Test
-    void check_if_money_currency_is_usd() {
+    void check_if_money_has_currency() {
         Assertions.assertEquals(CurrencyType.USD, (new Money(CurrencyType.USD)).getCurrency());
     }
 
@@ -31,5 +31,12 @@ public class MoneyTest {
         var cashInPln = new Money(CurrencyType.PLN);
         var cashInUsd = new Money(CurrencyType.USD, Double.valueOf(44.44));
         Assertions.assertEquals(Double.valueOf(11.11), cashInPln.convert(cashInUsd, Double.valueOf(4.0)).getValue());
+    }
+
+    @Test
+    void add_some_money_in_different_currency(){
+        var cashInPln = new Money(CurrencyType.PLN);
+        var cashInUsd = new Money(CurrencyType.USD, Double.valueOf(44.44));
+        Assertions.assertEquals(Double.valueOf(11.11), cashInPln.addMoney(cashInUsd, Double.valueOf(4.0)).getValue());
     }
 }
