@@ -1,6 +1,5 @@
 package pl.training.tdd;
 
-
 public class Money {
 
     private final CurrencyType currency;

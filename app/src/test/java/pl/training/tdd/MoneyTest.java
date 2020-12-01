@@ -20,9 +20,9 @@ public class MoneyTest {
     }
 
     @Test
-    void add_some_money_in_different_currency(){
+    void try_to_add_some_money_in_different_currency_and_expect_exception(){
         var cashInPln = new Money(CurrencyType.PLN);
-        var cashInUsd = new Money(CurrencyType.USD, Double.valueOf(22.22));
+        var cashInUsd = new Money(CurrencyType.USD);
         assertThrows(UnmatchetCurrencyException.class, () -> cashInPln.addMoney(cashInUsd));
     }
 }
