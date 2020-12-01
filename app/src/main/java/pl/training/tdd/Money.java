@@ -30,7 +30,13 @@ public class Money {
         return this.value;
     }
 
-    public Money convert(Money cashInUsd, Double exchangeRate) {
-        return this;
+    public Money convert(Money cashToConvert, Double exchangeRate) {
+        var retObj = new Money(this.getCurrency());
+        retObj.setValue(cashToConvert.getValue()/exchangeRate);
+        return retObj;
+    }
+
+    public void setValue(Double value){
+        this.value = value;
     }
 }
