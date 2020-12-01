@@ -1,5 +1,6 @@
 package pl.training.tdd;
 
+
 public class Money {
 
     private final CurrencyType currency;
@@ -19,6 +20,9 @@ public class Money {
     }
 
     public Money addMoney(Money money) {
+        if(!this.getCurrency().equals(money.getCurrency())){
+            throw new UnmatchetCurrencyException("Cannod add: " + this.getCurrency() + "with: " + money.getCurrency());
+        }
         this.value = this.value + money.value;
         return this;
     }
