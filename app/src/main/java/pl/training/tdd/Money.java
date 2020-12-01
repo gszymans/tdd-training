@@ -26,4 +26,5 @@ public class Money {
     public Double getValue() {
         return this.value;
     }
+
 }

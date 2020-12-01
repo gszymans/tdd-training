@@ -3,6 +3,8 @@ package pl.training.tdd;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class MoneyTest {
 
     @Test
@@ -15,5 +17,12 @@ public class MoneyTest {
         var cashInUsd = new Money(CurrencyType.USD);
         var cashInUsd2 = new Money(CurrencyType.USD, Double.valueOf(22.22));
         Assertions.assertEquals(Double.valueOf(22.22), cashInUsd.addMoney(cashInUsd2).getValue());
+    }
+
+    @Test
+    void add_some_money_in_different_currency(){
+        var cashInPln = new Money(CurrencyType.PLN);
+        var cashInUsd = new Money(CurrencyType.USD, Double.valueOf(22.22));
+        assertThrows(UnmatchetCurrencyException.class, () -> cashInPln.addMoney(cashInUsd));
     }
 }
